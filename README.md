@@ -1,98 +1,293 @@
+# Examen Práctico: Backend Music-App
+
+<p align="center">
+  Usando el framework de NestJS
+</p>
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Objetivo
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Desarrollar y desplegar una API RESTful escalable utilizando NestJS, PostgreSQL y TypeORM.
 
-## Description
+## Tecnologías utilizadas
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+<p> <a href="https://nestjs.com/" target="blank"> <img src="https://nestjs.com/img/logo-small.svg" width="20" alt="NestJS Logo" /> </a> NestJS / Nest CLI </p>
+<p> <a href="https://typeorm.io/" target="blank"> <img src="https://raw.githubusercontent.com/typeorm/typeorm/master/resources/logo_big.png" width="20" alt="TypeORM Logo" /> </a> TypeORM </p>
+<p> <a href="https://jwt.io/" target="blank"> <img src="https://jwt.io/img/logo-asset.svg" width="20" alt="JWT Logo" /> </a> JWT (Autenticación) </p>
+<p> <a href="https://www.postgresql.org/" target="blank"> <img src="https://www.postgresql.org/media/img/about/press/elephant.png" width="20" alt="PostgreSQL Logo" /> </a> PostgreSQL </p>
+<p> <a href="https://www.docker.com/" target="blank"> <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" width="20" alt="Docker Logo" /> </a> Docker </p>
+<p> <a href="https://git-scm.com/" target="blank"> <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" width="20" alt="Git Logo" /> </a> Git </p>
 
-## Project setup
+---
 
-```bash
-$ npm install
-```
+## Ejecución del proyecto
 
-## Compile and run the project
+### 🌐 Deployment
 
-```bash
-# development
-$ npm run start
+El proyecto se encuentra desplegado en Render:
 
-# watch mode
-$ npm run start:dev
+🔗 https://nest-examen-music-api.onrender.com
 
-# production mode
-$ npm run start:prod
-```
+### 📋 Requisitos previos
 
-## Run tests
+Para correr el proyecto localmente necesitas tener instalado:
+
+| Herramienta | Versión recomendada |
+|---|---|
+| [Git](https://git-scm.com/) | Última estable |
+| [Node.js](https://nodejs.org/) | LTS |
+| [Nest CLI](http://nestjs.com/) | Última estable |
+| [Docker](https://www.docker.com/) | Última estable |
+| [PostgreSQL](https://www.postgresql.org/) | 14+ |
+
+### Instalación paso a paso
+
+**Paso 1.** Clona el repositorio:
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+git clone https://github.com/RC-Dev07/nest-examen-music-api.git
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+**Paso 2.** Instala las dependencias:
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+cd nest-examen-music-api
+npm install
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+**Paso 3.** Configura las variables de entorno:
 
-## Resources
+```bash
+cp .env.example .env
+```
 
-Check out a few resources that may come in handy when working with NestJS:
+```env
+POSTGRES_HOST=your_host
+POSTGRES_PORT=your_port
+POSTGRES_USERNAME=your_username
+POSTGRES_PASSWORD=your_password
+POSTGRES_DATABASE=your_database
+POSTGRES_SSL=false
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+JWT_SECRET=your_jwt_secret
+JWT_EXPIRES_IN=time_in_seconds_or_string
+```
 
-## Support
+> **Nota:** Si usas Docker, asegúrate de que el `docker-compose.yml` coincida con los valores de tu `.env` y luego ejecuta:
+> ```bash
+> docker compose up -d
+> ```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+**Paso 4.** Inicia el servidor en modo desarrollo:
 
-## Stay in touch
+```bash
+npm run start:dev
+```
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+---
 
-## License
+## Entidades
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+El sistema cuenta con dos entidades principales relacionadas entre sí.
+
+### 🎤 Artist
+
+Representa a los artistas registrados en la plataforma. Un artista puede publicar múltiples canciones.
+
+| Campo | Tipo | Descripción |
+|---|---|---|
+| `id` | `number` | Identificador único (PK, autoincremental) |
+| `nombre` | `string` | Nombre del artista |
+| `email` | `string` | Email único del artista |
+| `password` | `string` | Contraseña encriptada (bcrypt) |
+| `rol` | `enum` | Rol del usuario: `ADMIN` \| `ARTIST` |
+| `pais` | `string` | País de origen |
+| `genero` | `string` | Género musical |
+| `anioDebut` | `number` | Año de debut |
+| `createdAt` | `Date` | Fecha de creación (auto) |
+| `updatedAt` | `Date` | Fecha de última actualización (auto) |
+
+**Relación:**
+
+```typescript
+@OneToMany(() => Song, (song) => song.artist)
+songs: Song[];
+```
+
+---
+
+### 🎵 Song
+
+Representa una canción publicada por un artista. Soporta eliminación lógica mediante `deletedAt`.
+
+| Campo | Tipo | Descripción |
+|---|---|---|
+| `id` | `number` | Identificador único (PK, autoincremental) |
+| `titulo` | `string` | Título de la canción |
+| `duracion` | `number` | Duración en segundos |
+| `album` | `string` | Álbum al que pertenece |
+| `anioLanzamiento` | `number` | Año de lanzamiento |
+| `reproducciones` | `number` | Cantidad de reproducciones |
+| `deletedAt` | `Date \| null` | Fecha de eliminación lógica (soft delete) |
+
+**Relación:**
+
+```typescript
+@ManyToOne(() => Artist, (artist) => artist.songs)
+artist: Artist;
+```
+
+---
+
+### 🔗 Diagrama de relaciones
+
+```
+┌─────────────────────┐         ┌─────────────────────┐
+│       Artist        │         │        Song         │
+├─────────────────────┤         ├─────────────────────┤
+│ id          (PK)    │ 1     N │ id          (PK)    │
+│ nombre              │◄────────│ titulo              │
+│ email       (UNIQUE)│         │ duracion            │
+│ password            │         │ album               │
+│ rol                 │         │ anioLanzamiento     │
+│ pais                │         │ reproducciones      │
+│ genero              │         │ deletedAt           │
+│ anioDebut           │         │ artistId    (FK)    │
+│ createdAt           │         └─────────────────────┘
+│ updatedAt           │
+└─────────────────────┘
+
+Un artista puede tener muchas canciones.
+Una canción pertenece a un único artista.
+```
+
+---
+
+## Roles del sistema
+
+El sistema maneja dos tipos de usuarios con distintos niveles de acceso:
+
+| Rol | Descripción |
+|---|---|
+| `ADMIN` | Administrador de la plataforma. Tiene acceso total sobre artistas y canciones. |
+| `ARTIST` | Artista registrado. Solo puede gestionar su propio perfil y sus propias canciones. |
+
+### Reglas de persmisos
+
+| Acción | `ADMIN` | `ARTIST` |
+|---|---|---|
+| Ver artistas | ✅ Todos | ✅ Solo él mismo |
+| Crear artista | ✅ | ✅ Solo él mismo |
+| Actualizar artista | ✅ Cualquiera | ✅ Solo él mismo |
+| Eliminar artista | ✅ | ❌ |
+| Ver canciones | ✅ Todas | ✅ Solo las suyas |
+| Crear canción | ✅ | ✅ Solo para sí mismo |
+| Actualizar canción | ✅ Cualquiera | ✅ Solo las suyas |
+| Eliminar canción | ✅ | ✅ Solo las suyas |
+| Cambiar artista de canción | ✅ | ❌ |
+
+---
+
+## Autenticación
+
+El sistema utiliza **JWT (JSON Web Tokens)** para proteger los endpoints. El módulo de autenticación expone tres rutas bajo el prefijo `/auth`.
+
+### Endpoints
+
+| Método | Ruta | Descripción | Acceso |
+|---|---|---|---|
+| `POST` | `/auth/register` | Registra un nuevo artista con rol `ARTIST` | Público |
+| `POST` | `/auth/register-admin` | Registra un nuevo administrador con rol `ADMIN` | Público* |
+| `POST` | `/auth/login` | Inicia sesión y retorna un JWT | Público |
+
+> **Nota:** El endpoint `/auth/register-admin` está destinado únicamente a ser usado por administradores existentes. En una implementación de producción se recomienda protegerlo con un guard de rol `ADMIN`.
+
+---
+
+### `POST /auth/register`
+
+Registra un nuevo usuario con rol `ARTIST`.
+
+**Body:**
+```json
+{
+  "nombre": "string",
+  "email": "string",
+  "password": "string",
+  "pais": "string",
+  "genero": "string",
+  "anioDebut": 2020
+}
+```
+
+**Respuestas:**
+
+| Código | Descripción |
+|---|---|
+| `201` | Usuario registrado correctamente |
+| `400` | El email ya está registrado |
+
+---
+
+### `POST /auth/register-admin`
+
+Registra un nuevo usuario con rol `ADMIN`.
+
+**Body:** igual que `/auth/register`
+
+**Respuestas:**
+
+| Código | Descripción |
+|---|---|
+| `201` | Administrador registrado correctamente |
+| `400` | El email ya está registrado |
+
+---
+
+### `POST /auth/login`
+
+Inicia sesión y retorna un token JWT para autenticar las siguientes peticiones.
+
+**Body:**
+```json
+{
+  "email": "string",
+  "password": "string"
+}
+```
+
+**Respuesta exitosa `200`:**
+```json
+{
+  "access_token": "eyJhbGCJ9..."
+}
+```
+
+**Respuestas:**
+
+| Código | Descripción |
+|---|---|
+| `200` | Login exitoso, retorna el JWT |
+| `400` | Usuario o contraseña incorrectos |
+
+---
+
+### Uso del token
+
+Una vez obtenido el token, inclúyelo en el header `Authorization` de cada petición protegida:
+
+```http
+Authorization: Bearer <access_token>
+```
+
+---
+
+## Documentación de la API
+
+La API está documentada con **Swagger UI** y se puede acceder en:
+
+- **Local:** http://localhost:3000/docs
+- **Producción:** https://nest-examen-music-api.onrender.com/docs
